@@ -1,0 +1,5 @@
+rootProject.name = 'employ-rotaract'
+
+include 'employ-rotaract-api'
+include 'employ-rotaract-core'
+

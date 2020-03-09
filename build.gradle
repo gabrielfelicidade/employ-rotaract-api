@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'br.com.rotaract'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task('run'){
+    group = 'application'
+    description = 'Build and run the project'
+
+    dependsOn(':employ-rotaract-api:clean')
+    dependsOn(':employ-rotaract-api:build')
+    dependsOn(':employ-rotaract-api:bootRun')
+}
